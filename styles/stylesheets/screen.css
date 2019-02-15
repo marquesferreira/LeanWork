@@ -1,0 +1,235 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../private/var/folders/9b/f2qj5lcd6g54439sfctdgylr0000gn/T/AppTranslocation/C76DFC37-2D10-4120-8ADF-CBCC7F4BE770/d/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../sass/screen.scss */
+html, body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 25, ../sass/screen.scss */
+html, body, main, aside {
+  height: 100%;
+}
+
+/* line 28, ../sass/screen.scss */
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 32, ../sass/screen.scss */
+main {
+  flex: 1;
+  height: 100%;
+}
+
+/* line 36, ../sass/screen.scss */
+aside {
+  flex: 3;
+  background: linear-gradient(rgba(64, 200, 244, 0.9), rgba(33, 121, 181, 0.8)), url(../images/bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+/* line 48, ../sass/screen.scss */
+.lean_title {
+  margin-top: 9vmin;
+  margin-left: 7vmin;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 2vw;
+  letter-spacing: 0.2px;
+  color: #606060;
+  text-align: left;
+}
+
+/* line 60, ../sass/screen.scss */
+.input-group, .button-group {
+  padding-left: 7vmin;
+  padding-right: 7vmin;
+  margin-top: 2vmin;
+}
+
+/* line 66, ../sass/screen.scss */
+.formulario {
+  margin-top: 9vmin;
+}
+
+/* line 70, ../sass/screen.scss */
+label {
+  color: #999999;
+  font-size: 0.9vw;
+}
+
+/* line 74, ../sass/screen.scss */
+input {
+  color: #efeeed;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 0;
+  outline: none;
+  height: 2rem;
+  width: 100%;
+  font-size: 0.9vw;
+  margin: 0 0 8px 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: border .3s, -webkit-box-shadow .3s;
+  transition: border .3s, -webkit-box-shadow .3s;
+  transition: box-shadow .3s, border .3s;
+  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+/* line 94, ../sass/screen.scss */
+input:focus {
+  color: #555555;
+}
+
+/* line 99, ../sass/screen.scss */
+button {
+  display: inline-block;
+  font-size: 1vw;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: none;
+}
+/* line 106, ../sass/screen.scss */
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+/* line 111, ../sass/screen.scss */
+button:disabled {
+  color: #dddcdc;
+  background: #f6f6f6;
+}
+
+/* line 117, ../sass/screen.scss */
+.botaoEnviar {
+  padding: 10px;
+  color: #ffffff;
+  background: #40c8f4;
+  width: 50%;
+}
+
+/* line 126, ../sass/screen.scss */
+.botaoEnviarDesativado {
+  width: 50%;
+}
+
+/* line 130, ../sass/screen.scss */
+.botaoLogin {
+  padding: 15px;
+  color: #999999;
+  background: none;
+  width: 40%;
+}
+
+@media (max-width: 800px) {
+  /* line 139, ../sass/screen.scss */
+  [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
+    font-size: 2.7vw;
+  }
+
+  /* line 142, ../sass/screen.scss */
+  aside {
+    height: 5vh !important;
+    min-height: 5vh;
+  }
+
+  /* line 146, ../sass/screen.scss */
+  .lean_title {
+    font-size: 3vw;
+  }
+
+  /* line 149, ../sass/screen.scss */
+  label {
+    font-size: 2vw;
+  }
+
+  /* line 152, ../sass/screen.scss */
+  button {
+    font-size: 2.2vw;
+  }
+
+  /* line 155, ../sass/screen.scss */
+  body {
+    flex-direction: column;
+  }
+}

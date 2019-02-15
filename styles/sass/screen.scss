@@ -1,0 +1,158 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "../bourbon/bourbon";
+
+
+// variaveis scss
+    $alturaTotal: 100%;
+    $alturaTitulo: 9vmin;
+    $marginLeftTitulo: 7vmin;
+    $titleColor: #606060;
+    $labelColor:#999999;
+    $padding: 10px;
+    $fontSizeBody:0.9vw;
+
+
+
+html, body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+html, body, main, aside{
+    height: $alturaTotal;
+}
+body {
+    display: flex;
+    flex-direction: row;
+}
+main{
+    flex:1;
+    height: 100%;
+}
+aside{
+    flex: 3;
+    background: linear-gradient(rgba(64,200,244,0.9), rgba(33,121,181,0.8)),
+    url(../images/bg.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position:center;
+    height: 100%;
+ 
+}
+.lean_title{
+    margin-top: $alturaTitulo;
+    margin-left:$marginLeftTitulo;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size:2vw; 
+    letter-spacing: 0.2px;
+    color: $titleColor;
+    text-align: left;
+}
+
+// codigo posicionamento elementos formulario
+.input-group, .button-group{
+    padding-left: $marginLeftTitulo;
+    padding-right: $marginLeftTitulo;
+    margin-top: 2vmin;
+}
+
+.formulario{
+    margin-top: $alturaTitulo;   
+}
+
+label{
+    color: $labelColor;
+    font-size:$fontSizeBody;
+}
+input{
+    color: #efeeed;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: $fontSizeBody;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+ &:focus{
+    color: #555555;
+ }
+}
+
+button{
+    display: inline-block;
+    font-size:1vw; 
+    border-radius: 20px; 
+    -moz-border-radius: 20px; 
+    -webkit-border-radius: 20px; 
+    border: none;
+    &:hover{
+        cursor: pointer; 
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+    &:disabled{
+    color:#dddcdc;
+    background: #f6f6f6;
+        
+    }
+}
+.botaoEnviar{   
+    padding:10px;
+    color: #ffffff;
+    background: #40c8f4;
+    width:50%;
+    &:hover{
+    
+    }
+}
+.botaoEnviarDesativado{
+
+    width:50%;
+}
+.botaoLogin{
+    padding:15px;
+    color: $labelColor;
+    background:none;
+    width:40%;
+}
+
+//media query transforma em coluna e ajusta fontes
+@media(max-width:800px){
+    #{$all-text-inputs} {
+        font-size: $fontSizeBody * 3;
+      } 
+    aside{
+        height: 5vh!important;
+        min-height: 5vh;
+    }
+    .lean_title{
+        font-size: 3vw;
+    }
+    label{
+        font-size: 2vw;
+    }
+    button{
+        font-size: 2.2vw;
+    }
+    body{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+            <link href="styles/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+            <link href="styles/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+            <script src="js/app.js"> </script>
+            <script src="js/mainController/mainController.js"> </script>
+            <!--[if IE]>
+                <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+            <![endif]-->
+    </head>
+<body ng-app="moduloPrincipal">
+
+<aside></aside>
+<main ng-controller="controllerForm"> 
+    <h1 class="lean_title"> Lean Cadastro </h1>
+    <form name="meuFormulario">
+        <div class="formulario">
+            <div class="input-group">
+                <label>Nome</label>
+                <input type="text" ng-model="pessoa.nome"  name="nome"></input>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" ng-model="pessoa.email" ng-required="true" name="email"></input>
+            </div>
+            <div class="input-group">
+                <label>CPF</label>
+                <input type="text" ng-model="pessoa.cpf" ng-model="cpf" id="cpf" ui-mask="999.999.999-99"></input>
+            </div>
+            <div class="input-group">
+                <label>Telefone</label>
+                <input type="tel" ng-model="pessoa.telefone" ng-required="true" id="telefone" name="telefone"  pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"></input>
+                <p ng-bind="{{pessoa.nome}}"></p>
+            </div> 
+
+        <div class="button-group">
+            <button class="botaoEnviar" ng-click="incluirPessoa(pessoa)" ng-disabled="meuFormulario.$invalid" >Cadastrar</button>
+            <button class="botaoLogin" >Login <i class="fa fa-arrow-right"></i></button>
+        </div>
+        </div>  
+    </form>          
+</main>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="js/mascaras.js"></script>
+
+</html>
