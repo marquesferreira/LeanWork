@@ -6,3 +6,4 @@
         var $telefone = $("#telefone");
         $telefone.mask("(00) 0000-00009");
     });
+

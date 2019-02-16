@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resultado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="styles/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="styles/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <script src="js/app.js"> </script>
+    <script src="js/mainController/resultadoController.js"> </script>
+    <script src="js/angular-indexed-db.js"></script>
+</head>
+<body ng-app="moduloResultado">
+    <div class="container">
+    <div ng-controller="resultadoController" class="flex-item">
+
+        <table style="width:100%" >
+                <tr>
+                  <th>nome</th>
+                  <th>Email</th> 
+                  <th>Telefone</th>
+                </tr>
+                <tr ng-repeat="p in pessoas" >
+                        <td>{{p[$index].nome}}</td>
+                        <td>{{p[$index].email}}</td> 
+                        <td>{{p[$index].telefone}}</td>
+                      </tr>
+    
+              </table>
+    </div>
+    </div>
+
+
+</body>
+</html>
