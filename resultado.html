@@ -15,24 +15,68 @@
 </head>
 <body ng-app="moduloResultado">
     <div class="container">
-    <div ng-controller="resultadoController" class="flex-item">
-
+    <div ng-controller="resultadoController  as vm" class="flex-item">
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h5>{{nome}} </h5>
+ 
+        </div>
+        <div class="modal-footer">
+        
+        </div>
+      </div>
         <table style="width:100%" >
                 <tr>
                   <th>nome</th>
                   <th>Email</th> 
                   <th>Telefone</th>
+                  <th>remover</th>
                 </tr>
-                <tr ng-repeat="p in pessoas" >
-                        <td>{{p[$index].nome}}</td>
-                        <td>{{p[$index].email}}</td> 
-                        <td>{{p[$index].telefone}}</td>
-                      </tr>
+                <tr ng-repeat="p in in vm.Message" >
+                        <td>{{p.nome}}</td>
+       
+                        <td><button onclick="deletarPessoa(p)">Excluir</button></td>
+                </tr>
     
               </table>
+<div id="result">
+
+</div>
+
+  <!-- Modal Trigger -->
+  <button data-target="modal1" class="btn modal-trigger">Adicionar Pessoa</button>
+
+
+         
     </div>
     </div>
 
 
 </body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="js/mascaras.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/jquery.redirect.js"> </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+          
+    </script>
+
+
 </html>

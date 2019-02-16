@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Resultado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="styles/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="styles/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"> </script>
+    <script src="js/mainController/adminController.js"> </script>
+   
+</head>
+
+
+<body ng-app="moduloPrincipal">
+
+    
+    <div class="container">
+            <nav>
+                    <div class="nav-wrapper input-group">
+                      <a href="#" class="brand-logo">Lean Work</a>
+                      <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/">Back</a></li>
+
+                      </ul>
+                    </div>
+                  </nav>
+    <div ng-controller="controllerAdmin" class="flex-item" data-ng-init="onLoad()">
+  
+            <h5> </h5>
+            <form>
+            <div class="formulario" >
+                  <div class="input-group">
+                      <label>Nome</label>
+                      <input type="text" ng-model="novaPessoa.nome"  name="nome"></input>
+                  </div>
+                  <div class="input-group">
+                      <label>Email</label>
+                      <input type="email" ng-model="novaPessoa.email" name="email"></input>
+                  </div>
+                  <div class="input-group">
+                      <label>CPF</label>
+                      <input type="text" ng-model="novaPessoa.cpf" id="cpf" ui-mask="999.999.999-99"></input>
+                  </div>
+                  <div class="input-group">
+                      <label>Telefone</label>
+                      <input type="tel" ng-model="novaPessoa.telefone"  id="telefone" 
+                      name="telefone"  pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"></input>      
+                  </div> 
+      
+              <div class="button-group">
+                  <button class="botaoEnviar botaoAdmin" ng-click="addPessoa()">Cadastrar</button>      
+              </div>
+         
+              </div>  
+          
+          </form>  
+
+          <div class="input-group">
+              <h4 class="center-align lean_title"> Registros</h4>
+          <ul class="collection">
+              <li ng-repeat="pessoa in pessoas" class="collection-item" >
+                    <div class="input-group formulario">
+                            <div class="row">
+                            <div class="col s2"><span>{{pessoa.nome}}</span> 
+                            </div>
+                            <div class="col s3"><span>{{pessoa.email}}</span></div>
+                            <div class="col s3"><span>{{pessoa.telefone}}</span></div>
+                            <div class="col s4">
+                    <button ng-click="editar(pessoa.id)" class="waves-effect waves-light btn-small">editar</button>
+                    <button ng-click="delete(pessoa.id)" class="waves-effect waves-light red btn-small">deletar</button>
+                </div>
+                </div>
+                </li>
+              </p> 
+            </ul>
+        </div>
+    </div>   
+</div>
+  
+
+</div>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="js/mascaras.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init();
+  });
+
+          
+    </script>
+</html>

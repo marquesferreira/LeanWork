@@ -7,6 +7,8 @@
             <link href="styles/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
             <script src="js/app.js"> </script>
             <script src="js/mainController/mainController.js"> </script>
+           
+           
             <!--[if IE]>
                 <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
             <![endif]-->
@@ -16,37 +18,39 @@
 <aside></aside>
 <main ng-controller="controllerForm"> 
     <h1 class="lean_title"> Lean Cadastro </h1>
-    <form name="meuFormulario">
+    <form name="meuFormulario" method="GET">
         <div class="formulario">
             <div class="input-group">
                 <label>Nome</label>
-                <input type="text" ng-model="pessoa.nome"  name="nome"></input>
+                <input type="text" ng-model="novaPessoa.nome"  name="nome"></input>
             </div>
             <div class="input-group">
                 <label>Email</label>
-                <input type="email" ng-model="pessoa.email" ng-required="true" name="email"></input>
+                <input type="email" ng-model="novaPessoa.email" ng-required="true" name="email"></input>
             </div>
             <div class="input-group">
                 <label>CPF</label>
-                <input type="text" ng-model="pessoa.cpf" ng-model="cpf" id="cpf" ui-mask="999.999.999-99"></input>
+                <input type="text" ng-model="novaPessoa.cpf" ng-model="cpf" id="cpf" ui-mask="999.999.999-99"></input>
             </div>
             <div class="input-group">
                 <label>Telefone</label>
-                <input type="tel" ng-model="pessoa.telefone" ng-required="true" id="telefone" name="telefone"  pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"></input>
+                <input type="tel" ng-model="novaPessoa.telefone" ng-required="true" id="telefone" name="telefone"  pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}"></input>
               
             </div> 
 
         <div class="button-group">
-            <button class="botaoEnviar" ng-click="incluirPessoa(pessoa)" ng-disabled="meuFormulario.$invalid" >Cadastrar</button>
+            <button class="botaoEnviar" id="testButton" ng-click="addPessoa()" ng-disabled="meuFormulario.$invalid" >Cadastrar</button>
             <button class="botaoLogin" >Login <i class="fa fa-arrow-right"></i></button>
         </div>
         </div>  
-    </form>          
+    </form>    
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script type="text/javascript" src="js/mascaras.js"></script>
+  
 </main>
 
 </body>
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
-<script type="text/javascript" src="js/mascaras.js"></script>
+
 
 </html>

@@ -133,7 +133,14 @@ button{
     background:none;
     width:40%;
 }
-
+.botaoAdmin{
+    margin:auto;
+  display:block;
+}
+.input-group span{
+overflow-x: hidden;
+overflow-y: hidden;
+}
 //media query transforma em coluna e ajusta fontes
 @media(max-width:800px){
     #{$all-text-inputs} {

@@ -1,4 +1,3 @@
-
 appResultado.factory('$storage', function($window){
     return {
       get: function(key){
@@ -14,41 +13,33 @@ appResultado.factory('$storage', function($window){
     }
   });
 
-  appResultado.controller('resultadoController', function($scope, $storage){
-    $scope.$storage = $storage;
-    $storage.set('testKey', 15);
-    $scope.setAnObject = function(){
-      $storage.set('testKey', {foo:'bar', baz: 777});
-    }
-  });
+appResultado.controller('resultadoController', function($scope, $storage){
+$scope.$storage = $storage;
 
-
-
-
-
-
-
-
-
-
-/*
-appResultado.controller('resultadoController', function($scope, $indexedDB){
 $scope.pessoas =[];
-var objeto = [];
+var objeto =[];
 //get no storage valor que acabou de passar
-var objeto = angular.fromJson(localStorage.getItem('pessoasVsJSON'));
-localStorage.clear();
-console.log("objeto" + objeto);
-var objetoNovo =new Array();
-//seta no novo storage o objeto que recebi
+// var objeto = $storage.get('testKey');
+// $scope.pessoas.push(angular.copy(objeto));
+// console.log("objeto" + objeto);
 
-$scope.pessoas.push(objeto);
 
-$scope.pessoas = angular.fromJson($scope.pessoas);
-console.log("pessoas" + $scope.pessoas);
-var teste = angular.toJson($scope.pessoas);
-angular.toJson(localStorage.setItem('pessoasVsJSON', $scope.pessoas));
+$scope.deletarPessoa = function(Pessoa){
+    for(var index in $scope.pessoas){
+        var aux = $scope.pessoas[index];
+        if(Pessoa == aux){
+            $scope.pessoas.splice(index,1);
+        }
+    }
+}
+
+$scope.adicionaPessoa = function(Form){
+    console.log("chamei");
+    $scope.pessoas.push(Form);
+    console.log(Form.nome);
+    var instance = M.Modal.getInstance(elem);
+
+instance.close();
+}
 }); 
-*/
-
 
