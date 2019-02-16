@@ -18,6 +18,6 @@
   7 - Clique em Editar para editar um contato, as informações serão carregadas no formulário acima.<br>
   8 - Após as editar, clique em cadastrar e seu Contato será atualizado<br>
   9 - Para excluir um contato, vá ao contato desejado e clique em excluir.<br>
- 10 - Também é possível  adicionar novos contatos utilizando o fomrmulário acima.<br>
+ 10 - Também é possível  adicionar novos contatos utilizando o formulário acima.<br>
   <hr>
 </html>
