@@ -1,5 +1,5 @@
 <html>
-  <h1>Teste Lean Work </h1>
+  <h1>Lean Work </h1>
   
   <h2>Minha solução</h2>
    Na minha solução eu busquei uma tela de cadastro limpa, contando com as principais validações e máscaras para o formulário.   <br>
