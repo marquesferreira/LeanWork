@@ -2,9 +2,9 @@
   <h1>Lean Work </h1>
   
   <h2>Minha solução</h2>
-   Na minha solução eu busquei uma tela de cadastro limpa, contando com as principais validações e máscaras para o formulário.   <br>
-   No estilo eu optei por utilizar <strong>SaSS com Compass, Flexbox e  também utilizei MaterializeCss, apenas para a área administrativa.<br>     </strong><br>
-   Utilizei principalmente<strong> AngularJS</strong> na aplicação, com auxilio de um pouco de Jquery.
+
+   No estilo eu optei por utilizar <strong>SaSS com Compass, Flexbox e  também  , apenas para a área administrativa.<br>     </strong><br>
+   Utilizei principalmente<strong> AngularJS</strong> na aplicação.
   <br>
   
   <h3>Como usar</h3>
