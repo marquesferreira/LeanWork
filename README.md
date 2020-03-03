@@ -3,7 +3,7 @@
   
   <h2>Minha solução</h2>
 
-   No estilo eu optei por utilizar <strong>SaSS com Compass, Flexbox e  também  , apenas para a área administrativa.<br>     </strong><br>
+   No estilo eu optei por utilizar <strong>SaSS com Compass, Flexbox<br>     </strong><br>
    Utilizei principalmente<strong> AngularJS</strong> na aplicação.
   <br>
   
